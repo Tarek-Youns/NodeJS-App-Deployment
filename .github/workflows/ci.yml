@@ -70,10 +70,13 @@ jobs:
         uses: hashicorp/setup-terraform@v1
       
       - name: Terraform Init
-        run: terraform -chdir=terraform init
+        run: terraform -chdir=Terraform init
+
+      - name: Terraform plan
+        run: terraform -chdir=Terraform plan
       
       - name: Terraform Apply
-        run: terraform -chdir=terraform apply --auto-approve
+        run: terraform -chdir=Terraform apply --auto-approve
 
       - name: Get Instance IP
         id: tarek
