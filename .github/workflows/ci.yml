@@ -77,6 +77,8 @@ jobs:
       
       - name: Terraform Apply
         run: terraform -chdir=Terraform apply --auto-approve
+      - name: Terraform Destroy
+        run: terraform -chdir=Terraform destroy --auto-approve
 
       - name: Get Instance IP
         id: tarek
